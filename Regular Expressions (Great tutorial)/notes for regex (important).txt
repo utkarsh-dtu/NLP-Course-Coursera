@@ -1,0 +1,71 @@
+video link:
+https://www.youtube.com/watch?v=sa-TUpSx1JA
+
+repository link:
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Regular-Expressions
+
+practice here:
+https://regexr.com/
+
+\d\d\d[-.]\d\d\d[-.]\d\d\d\d
+
+\d will match any digit
+. will match any character 
+\. (backslash is for escape and it means that . will match '.' only)
+[] means we are providing a character set, and all those characters provided in this 
+set will be matched
+
+[1-7] means we want to match digits between 1 and 7 both included
+[a-z] means we want to match characters between a and z (only lowercase)
+[A-Z] means we want to match characters between A and Z (only uppercase)
+[a-zA-Z] means all the characters from a-z and A-Z
+
+[^a-z] ^ inside a character set means it is negation, means everything outside the range a-z will be matched
+S$ means that it should end with the string S
+
+example
+lets say we want to match strings which end with at, except for the string bat
+then 
+[^b]at
+
+[] - matches characters in brackets
+[^] -  matches characters NOT in brackets
+| - Either or 
+() - Group
+
+Quantifiers:
+* - 0 or More
++ - 1 or More
+? - 0 or 1
+{3} Exact Number
+{3, 5} - Range of Numbers (Minimum, Maximum)
+
+\d{3}
+
+Mr\.?[A-Z]
+
+? for matching 0 or 1 occurrences of the preceding character (in this case . [we have used escape])
+
+
+for Name (Mr. Yasiu or Mr Uta or Ms. or Ms. Pw or Mrs Ias or Mrs. Pa)
+we can use: M(r|s|rs)\.?\s[A-Z]\w*
+
+for matching email 
+
+
+[a-zA-Z0-9.-]+@[a-zA-Z-]+\.(com|net|edu)
+
+this will match the following types of emails
+
+CoreyMSchafer@gmail.com
+corey.schafer@univeristy.edu
+corey-321-schafer@my-work.net
+
+
+to match website names
+
+https?:\/\/(www\.)?(\w+)(\.\w+)
+
+
+https://www.google.com
+http://www.awf0q2ei4021.com
